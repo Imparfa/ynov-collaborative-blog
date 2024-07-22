@@ -1,0 +1,21 @@
+{# templates/article/new.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}New Article{% endblock %}
+
+{% block body %}
+    <div class="article-form">
+        <h1>Create New Article</h1>
+        {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.title) }}
+            {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.content) }}
+            {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <button type="submit" class="btn">Save</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

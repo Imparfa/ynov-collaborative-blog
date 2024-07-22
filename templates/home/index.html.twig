@@ -1,0 +1,36 @@
+{# templates/home/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="hero">
+        <img src="{{ asset('illustrations/banner.png') }}" alt="banner"/>
+        <h1>A few words about this blog platform, Ghost, and how this site was made</h1>
+        <p>Why Ghost (& Figma) instead of Medium, WordPress or other options?</p>
+    </div>
+
+    <hr/>
+
+    <div class="articles">
+        <h2>All articles</h2>
+        <div class="article-list">
+            <div class="article-item">
+                <img src="{{ asset('illustrations/article1.jpg') }}" alt="illustration"/>
+                <h3>La nouvelle mise à jour folle de wordpress</h3>
+            </div>
+            <div class="article-item">
+                <img src="{{ asset('illustrations/article2.jpg') }}" alt="illustration"/>
+                <h3>Microsoft annonce leur tout nouveau logiciel de travail</h3>
+            </div>
+            <div class="article-item">
+                <img src="{{ asset('illustrations/article3.jpg') }}" alt="illustration"/>
+                <h3>Codeur de l'extreme il recrée un jeu en binaire</h3>
+            </div>
+            <div class="article-item">
+                <img src="{{ asset('illustrations/article4.jpg') }}" alt="illustration"/>
+                <h3>Créer son propre blog en 3 clics</h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{
+  "name": "ynov-collaborative-blog",
+  "version": "1.0.0",
+  "description": "A Symfony project with Bootstrap integration using Webpack Encore",
+  "private": true,
+  "scripts": {
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  },
+  "devDependencies": {
+    "core-js": "^3.0.0",
+    "regenerator-runtime": "^0.13.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^12.0.0",
+    "webpack-notifier": "^1.6.0"
+  }
+}

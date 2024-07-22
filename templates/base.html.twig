@@ -1,0 +1,54 @@
+{# templates/base.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Nordic Rose{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">NORDIC ROSE</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Links</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+            {% if app.user %}
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_logout') }}">Logout</a></li>
+            {% else %}
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ path('app_register') }}">Register</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<main class="content">
+    {% block body %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="footer-banner">
+        <p>DIGITAL PRODUCT DESIGN REMOTE WORK <strong>UX DESIGN</strong> DISTRIBUTED TEAMS <strong>CREATIVITY</strong>
+            STRATEGY <strong>SUSPENSE</strong> GROWTH</p>
+    </div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h1>NORDIC ROSE</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit tempus erat egestas efficitur. In
+                hac habitasse platea dictumst. Fusce a nunc eget ligula suscipit finibus.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">RSS</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2012-2020 Nordic Rose Co.</p>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

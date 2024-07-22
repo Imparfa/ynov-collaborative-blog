@@ -1,0 +1,25 @@
+{# templates/security/register.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="register-form">
+        <h1>Register</h1>
+        {{ form_start(registrationForm) }}
+        <div class="form-group">
+            {{ form_label(registrationForm.username) }}
+            {{ form_widget(registrationForm.username, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(registrationForm.plainPassword.first) }}
+            {{ form_widget(registrationForm.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(registrationForm.plainPassword.second) }}
+            {{ form_widget(registrationForm.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <button type="submit" class="btn">Register</button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}
